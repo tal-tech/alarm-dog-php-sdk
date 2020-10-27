@@ -1,0 +1,17 @@
+!.gitkeep
+.DS_Store
+.buildpath
+.settings/
+coverage/
+.project
+*.patch
+.idea/
+.git/
+.github/
+.svn
+.vscode
+runtime/
+vendor/
+.phpintel/
+.env
+composer.lock

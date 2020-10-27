@@ -1,0 +1,42 @@
+{
+    "name": "alarm-dog/alarm",
+    "description": "哮天犬告警平台告警SDK",
+    "type": "library",
+    "authors": [
+        {
+            "name": "ethananony",
+            "email": "ethananony@aliyun.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dog\\Alarm\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "guzzlehttp/guzzle": "*"
+    },
+    "suggest": {
+        "hyperf/guzzle": "If you want to use swoole coroutine, you must install it"
+    },
+    "extra": {
+        "hyperf": {
+            "config": "Dog\\Alarm\\Provider\\HyperfConfigProvider"
+        },
+        "laravel": {
+            "providers": [
+                "Dog\\Alarm\\Provider\\LaravelServiceProvider"
+            ],
+            "aliases": {
+                "Passport": "Dog\\Alarm\\Provider\\Laravel\\AlarmFacade"
+            }
+        }
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1"
+    }
+}
